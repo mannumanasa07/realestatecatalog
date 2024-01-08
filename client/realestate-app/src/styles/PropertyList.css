@@ -5,7 +5,7 @@
     border: 1px solid black;
 }
 .header{
-    height: 13%; 
+    height: 10%; 
     width: auto;
     display: flex;
     border: 1px solid black;
@@ -21,6 +21,7 @@
     justify-content: center;
     border: 1px solid black;
     padding: 20px 20px;
+    
 }
 .logo h2{
   position:absolute;
@@ -38,6 +39,7 @@
 }
 .userdetails p1{
  margin-top: 25px;
+ margin-left: 30px;
  
 }
 .list ul li{
@@ -89,7 +91,7 @@
     border-radius: 20px;
     height:30px;
     border-color: #E6E6E6;
-    margin-right: 300px;
+    margin-right: 400px;
 }
 .addbtn{
     height:40px;
