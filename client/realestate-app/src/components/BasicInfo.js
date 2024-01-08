@@ -1,8 +1,11 @@
 import React from 'react'
 
+
 function BasicInfo() {
   return (
+    
     <div>
+      <p1>Hello</p1>
         <div>ADD NEW PROPERTY</div>
         <div><ul>
             <li>Basic Info</li>
