@@ -61,6 +61,9 @@
     display: flex;
     justify-content: space-between;
 }
+.content{
+    text-align: center;
+}
 .maincontainer-sub2{
     height: 80%;
     width: 100%;
@@ -72,9 +75,8 @@
     border: 1px solid black;
     display: flex;
     align-items: center;
-    text-align: center;
-
-
+    justify-content: center;
+    border-radius: 50%;
 }
 .form-group {
     display: inline-block;

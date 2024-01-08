@@ -40,10 +40,14 @@ function BasicInfo() {
         </div>
         <div className="maincontainer">
           <div className="maincontainer-sub1">
-            <div className="maincontainer-sub1-partitions">1. Basic info</div>
-            <div className="maincontainer-sub1-partitions">2. Property details</div>
-            <div className="maincontainer-sub1-partitions">3. Genaral info</div>
-            <div className="maincontainer-sub1-partitions">4. Location details</div>
+            <div className="maincontainer-sub1-partitions">
+              <div className="content">1. Basic info</div></div>
+            <div className="maincontainer-sub1-partitions">
+              <div className="content">2. Property details</div></div>
+            <div className="maincontainer-sub1-partitions">
+              <div className="content">3. Genaral info</div></div>
+            <div className="maincontainer-sub1-partitions">
+              <div className="content">4. Location details</div></div>
           </div>
           <div className="maincontainer-sub2">
             <div className="form-group">
