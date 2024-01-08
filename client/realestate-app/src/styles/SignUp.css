@@ -1,4 +1,6 @@
 .container{
+   height: 99vh;
+   width: 99vh;
     display: flex;
     /* border:1px solid black; */
     justify-content: center;
@@ -47,4 +49,10 @@
  }
  p1{
     color:#000000;
+ }
+ .message{
+   margin:120px;
+   color: blue;
+   font-size: larger;
+   font-family: Georgia, 'Times New Roman', Times, serif;
  }

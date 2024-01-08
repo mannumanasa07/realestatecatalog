@@ -1,12 +1,12 @@
 import React from 'react'
 import '../styles/PropertyList.css'
 
-function PropertyList() {
+function PropertyList(props) {
   return (
     <div className='main-container'>
         <div className='header'>
             <div className='logo'><h2>Logo</h2></div>
-            <div className='userdetails'><p1>USERID:</p1><p1>UserName</p1></div>
+            <div className='userdetails'><p1>USERID:{props.location.state.userId}</p1><p1>{props.location.state.username}</p1></div>
         </div>
         <div className='content'>
             <div className='list'>
