@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/GeneralInfo.css";
 
-function PropertyDetail() {
+function GeneralInfo() {
   return (
     <div className="main-container">
       <div className="header">
@@ -90,4 +90,4 @@ function PropertyDetail() {
   );
 }
 
-export default PropertyDetail;
+export default GeneralInfo;

@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/PropertyDetail.css";
+import "../styles/LocationInfo.css";
 
-function PropertyDetail() {
+function LocationInfo() {
   return (
     <div className="main-container">
       <div className="header">
@@ -103,4 +103,4 @@ function PropertyDetail() {
   );
 }
 
-export default PropertyDetail;
+export default LocationInfo;
