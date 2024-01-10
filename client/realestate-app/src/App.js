@@ -5,6 +5,8 @@ import SignUp from './components/SignUp';
 import PropertyList from './components/PropertyList';
 import BasicInfo from './components/BasicInfo';
 import PropertyDetail from "./components/PropertyDetail"
+import GeneralInfo from './components/GeneralInfo';
+import LocationInfo from './components/LocationInfo';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path='/propertylist' exact component={PropertyList} />
           <Route path='/basicinfo' exact component={BasicInfo}/>
           <Route path='/propertydetails' exact component={PropertyDetail}/>
+          <Route path='/generalinfo' exact component={GeneralInfo}/>
+          <Route path='/locationinfo' exact component={LocationInfo}/>
         </Switch>
       </div>
     </Router>

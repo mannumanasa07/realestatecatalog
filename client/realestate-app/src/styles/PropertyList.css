@@ -20,7 +20,7 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
     border: 1px solid black;
-    padding: 20px 20px;
+     padding: 20px 20px; 
     
 }
 .logo h2{
@@ -91,12 +91,13 @@
 }
 .srh{
     border-radius: 20px;
-    height:10px;
+    height:30px;
     border-color: #E6E6E6;
     margin-right: 400px;
 }
 .addbtn{
     height:30px;
+    width: 150px;
     margin-left: 450px; 
     background-color: #6AB4F8;
     border-radius: 20px;

@@ -75,7 +75,15 @@ import { useHistory } from 'react-router-dom';
         state: {
           userId: props.location.state.userId,
           username: props.location.state.username,
-          propertyId: receivedPropertyId// Pass the newly created property ID
+          propertyId: receivedPropertyId,
+          propertyType,
+          price,
+          propertyAge,
+          propertyDescription,
+          negotiable,
+          ownership,
+          propertyApproved,
+          bankLoan,
         }
       })})
     .catch(error => console.error("Error during basicinfo:", error.response));

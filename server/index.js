@@ -125,6 +125,36 @@ console.log(newUserId);
       ownership: req.body.ownership,
       propertyApproved: req.body.propertyApproved,
       bankLoan: req.body.bankLoan,
+
+      length: req.body.length,
+      totalarea: req.body.totalArea,
+      noofBHK: req.body.bhk,
+      attached: req.body.attatched,
+      furnished: req.body.furnished,
+      lift: req.body.lift,
+      facing: req.body.facing,
+      breadth: req.body.breadth,
+      areaunit: req.body.areaUnit,
+      nooffloors: req.body.floors,
+      westerntoilet:req.body.westernToilet,
+      carparking: req.body.carparking,
+      electricity: req.body.electricity,
+      name: req.body.name,
+postedby:req.body.postedBy,
+featurepackage:req.body.featuredPackage,
+mobile:req.body.mobile,
+saletype:req.body.saleType,
+ppdpackage: req.body.ppdPackage,
+email:req.body.email,
+area: req.body.area,
+address:req.body.address,
+latitude:req.body.latitude,
+city: req.body.city,
+pincode:req.body.pincode,
+landmark:req.body.landmark,
+longitude: req.body.longitude
+
+
     };
 
     console.log(propertyData);
