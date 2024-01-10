@@ -67,7 +67,7 @@ function SignUp () {
           <input className='line' type="password" placeholder='confirm password' value={confirmPW} onChange={confirmPWChange} required/>
         </label>
         <button type="submit" >Sign Up</button>
-        <button type='submit' onClick={history.push("/")}>Sign In</button>
+        <button type='submit' onClick={()=>history.push("/")}>Sign In</button>
         </form>
       </div>
       {UserId && <p className='message'>Thanks for signing up your User Id is {UserId}</p>}

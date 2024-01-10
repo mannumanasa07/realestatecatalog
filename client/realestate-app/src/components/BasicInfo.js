@@ -15,7 +15,7 @@ import { useHistory } from 'react-router-dom';
     const [ownership, setOwnership] = useState('');
     const [propertyApproved, setPropertyApproved] = useState('');
     const [bankLoan, setBankLoan] = useState('');
-    const [receivedPropertyType,setReceivedPropertyType] = useState('');
+    const [receivedPropertyId,setReceivedPropertyId] = useState('');
 
     const history = useHistory();
 
@@ -68,8 +68,25 @@ import { useHistory } from 'react-router-dom';
         bankLoan,
       };
       axios.post("http://localhost:4000/createProperty", basicinfo)
-    .then(res => {setReceivedPropertyType(res.data.propertyType);console.log(res.data.propertyType);history.push('/propertydetails');})
+    .then(res => {setReceivedPropertyId(res.data.propertyId);
+      console.log(res.data.propertyId);
+      history.push({
+        pathname: '/propertydetails',
+        state: {
+          userId: props.location.state.userId,
+          username: props.location.state.username,
+          propertyId: receivedPropertyId// Pass the newly created property ID
+        }
+      })})
     .catch(error => console.error("Error during basicinfo:", error.response));
+    };
+
+    const handleCancel = () => {
+      console.log('props.location.state:', props.location.state);
+      history.push({
+        pathname: '/propertylist',
+        state: { userId: props.location.state.userId, username: props.location.state.username }
+      });
     };
   
   return (
@@ -142,7 +159,7 @@ import { useHistory } from 'react-router-dom';
                 <option value="cash">Cash</option>
               </select><br/>
               <button className='label1'onClick={handleSubmit}>Save and continue</button>
-              <button type="button" className='label1'>Cancel</button>
+              <button type="button" className='label1' onClick={handleCancel}>Cancel</button>
             </div>
           </div>
         </div>

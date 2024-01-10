@@ -10,8 +10,8 @@ return (
 <h2>Logo</h2>
 </div>
 <div className="userdetails">
-<p1>USERID:</p1>
-<p1>UserName</p1>
+<p>USERID:</p>
+<p>UserName</p>
 </div>
 </div>
 <div className="content">

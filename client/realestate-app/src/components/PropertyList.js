@@ -7,21 +7,21 @@ function PropertyList(props) {
   const history = useHistory();
   return (
     <div className='main-container'>
-        <div className='header'>
-            <div className='logo'><h2>Logo</h2></div>
-            <div className='userdetails'><p1>USERID:{props.location.state.userId}</p1><p1>{props.location.state.username}</p1></div>
+      <div className='header'>
+        <div className='logo'><h2>Logo</h2></div>
+        <div className='userdetails'><p>User ID:{props.location.state.userId}</p><p>username:{props.location.state.username}</p></div>
+      </div>
+      <div className='content'>
+        <div className='list'>
+          <ul>
+            <li className='list1'>Property</li>
+            <li className='list2'>Assistance</li>
+            <li className='list3'>Received Interest</li>
+            <li className='list4'>Sent Interest</li>
+            <li className='list5'>Property Views</li>
+            <li className='list6'>Tariff Plan</li>
+          </ul>
         </div>
-        <div className='content'>
-            <div className='list'>
-              <ul>
-                <li className='list1'>Property</li>
-                <li className='list2'>Assistance</li>
-                <li className='list3'>Received Interest</li>
-                <li className='list4'>Sent Interest</li>
-                <li className='list5'>Property Views</li>
-                <li className='list6'>Tariff Plan</li>
-              </ul>
-            </div>
             <div className='var-content'>
                 <div className='srh-btn'>
                   <input type="text" placeholder='search'className='srh'/>
