@@ -126,6 +126,8 @@ console.log(newUserId);
       propertyApproved: req.body.propertyApproved,
       bankLoan: req.body.bankLoan,
     };
+
+    console.log(propertyData);
       
           const property = await propertyModel.create(propertyData);
 
@@ -133,7 +135,7 @@ console.log(newUserId);
       
           res.json({
             status: "success",
-            propertyType:property.propertyType
+            propertyId:newPropertyId
           });
         } catch (e) {
           res.status(400).json({
