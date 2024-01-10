@@ -1,7 +1,10 @@
 import React from 'react'
 import '../styles/PropertyList.css'
+import { useHistory } from 'react-router-dom'
 
 function PropertyList(props) {
+
+  const history = useHistory();
   return (
     <div className='main-container'>
         <div className='header'>
@@ -22,7 +25,10 @@ function PropertyList(props) {
             <div className='var-content'>
                 <div className='srh-btn'>
                   <input type="text" placeholder='search'className='srh'/>
-                  <button className='addbtn'>+Add Property</button>
+                  <button className='addbtn' onClick={()=>history.push({
+              pathname: '/basicinfo',
+              state: { userId: props.location.state.userId,username:props.location.state.username}
+          })}>+Add Property</button>
                   </div>
                 <div className='table'>
   {/* <table>

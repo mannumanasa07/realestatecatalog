@@ -3,7 +3,7 @@ const mongoose=require("mongoose");
 const bodyParser = require("body-parser");
 const cors=require("cors");               
 const app = express();
-
+const propertyModel = require("./property");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -99,4 +99,49 @@ console.log(newUserId);
         }
     
       });
+
+
+      app.post("/createProperty", async (req, res) => {
+
+        try {
+
+          const userId = req.body.userId;
+          console.log(userId);
+
+          const highestIdProperty = await propertyModel.findOne({ userId: userId}, {_id: 1}, { sort: {_id: -1}});
+    const newPropertyId = highestIdProperty ? highestIdProperty._id + 1 : 30000;
+     
+    console.log(highestIdProperty);
+    console.log(newPropertyId);
+
+    const propertyData = {
+      _id: newPropertyId,
+      userId: userId,
+      propertyType: req.body.propertyType,
+      price: req.body.price,
+      propertyAge: req.body.propertyAge,
+      propertyDescription: req.body.propertyDescription,
+      negotiable: req.body.negotiable,
+      ownership: req.body.ownership,
+      propertyApproved: req.body.propertyApproved,
+      bankLoan: req.body.bankLoan,
+    };
+      
+          const property = await propertyModel.create(propertyData);
+
+          console.log(property);
+      
+          res.json({
+            status: "success",
+            propertyType:property.propertyType
+          });
+        } catch (e) {
+          res.status(400).json({
+            status: "error",
+            message: e.message,
+          });
+        }
+      });
+      
+
 app.listen(4000, () => console.log(`App listening on port 4000!`));
